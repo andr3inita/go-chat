@@ -1,0 +1,96 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, Calibri, Arial, sans-serif;
+}
+
+body {
+  background: #333;
+  color: #ccc;
+  overflow: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.input-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #0077aa;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.input-form form {
+  order: 1;
+  flex-grow: 11;
+  margin: 5px;
+  display: flex;
+}
+
+.input-form form input {
+  display: block;
+  background: rgba(204, 204, 204, 0.4);
+  border: none;
+  font-size: 20pt;
+  color: #ccc;
+  padding: 0 5px;
+  flex-grow: 1;
+}
+
+.input-form button {
+  order: 2;
+  flex-grow: 1;
+  margin: 5px;
+  background: #333;
+  font-size: 20pt;
+  color: #ccc;
+  border: none;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.input-form button:hover {
+  background: #ccc;
+  color: #333;
+}
+
+/* Message styles */
+
+.message-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 65px;
+  overflow-y: scroll;
+}
+
+.message-box .message {
+  display: flex;
+  font-size: 20pt;
+  padding: 10px 5px;
+}
+
+.message-box .message .username {
+  flex-grow: 0.5;
+  text-align: center;
+  color: #0077aa;
+  text-decoration: underline;
+  min-width: 16.3%;
+}
+
+.message-box .message .username:after {
+  content: ':';
+}
+
+.message-box .message .body {
+  flex-grow: 11.5;
+}

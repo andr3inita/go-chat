@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Go Chat</title>
+    <link href="/css/smoke.css" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input type="hidden" id="channel-token" value="{{ .token }}"/>
+    <div class="message-box"></div>
+    <div class="input-form">
+      <form>
+        <input type="text" class="message">
+      </form>
+      <button>Send</button>
+    </div>
+
+    <template id="message-tmpl">
+      <div class="message">
+        <span class="username"></span>
+        <span class="body"></span>
+      </div>
+    </template>
+
+    <script src="/js/smoke.min.js"></script>
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
