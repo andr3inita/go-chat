@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="charset" content="utf8" />
+    <meta http-equip="viewport" content="width=device-width, initial-scale=1" />
+    <title>Go Chat</title>
+    <link href="/css/smoke.css" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input type="hidden" class="channel-token" value="{{ .token }}" />
+    <div class="content"></div>
+    <script src="/js/bower_components/requirejs/require.js"></script>
+    <script>
+      require(["js/config"], function() {
+        require(["Application"], function() {
+          // Application started
+        });
+      });
+    </script>
+  </body>
+</html>

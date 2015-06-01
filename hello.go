@@ -1,6 +1,7 @@
 package hello
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 
@@ -8,7 +9,10 @@ import (
 	"appengine/channel"
 )
 
-const channelKey = "tno_chat"
+const (
+	channelKey = "tno_chat"
+	indexFile  = "index_react"
+)
 
 func init() {
 	http.HandleFunc("/send", chatHandler)
@@ -30,7 +34,7 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
 func mainHandler(w http.ResponseWriter, r *http.Request) {
 	context := appengine.NewContext(r)
 
-	tmpl, err := template.ParseFiles("static/templates/index.html")
+	tmpl, err := template.ParseFiles(fmt.Sprintf("static/templates/%s.html", indexFile))
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

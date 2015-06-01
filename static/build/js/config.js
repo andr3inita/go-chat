@@ -1,0 +1,17 @@
+requirejs.config({
+  baseUrl: "js",
+  paths: {
+    // Libraries
+    reactjs: "bower_components/react/react-with-addons.min",
+    smoke: "smoke.min",
+    channel: location.protocol + "//" + location.host + "/_ah/channel/jsapi?noext",
+
+    // Application
+    Application: "application"
+  },
+  shim: {
+    channel: {
+      exports: "goog"
+    }
+  }
+});

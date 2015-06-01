@@ -1,0 +1,22 @@
+{
+  "name": "go-chat",
+  "main": "index.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bbuck/go-chat",
+  "authors": [
+    "Brandon Buck <lordizuriel@gmail.com>"
+  ],
+  "description": "A live chat with a Go backend on AppEngine written in React.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3",
+    "requirejs": "~2.1.18"
+  }
+}

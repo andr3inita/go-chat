@@ -16,6 +16,14 @@ body {
   left: 0;
 }
 
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .input-form {
   position: absolute;
   bottom: 0;
@@ -27,23 +35,17 @@ body {
   flex-direction: row;
   padding: 5px;
   box-sizing: border-box;
+  justify-content: space-around;
 }
 
-.input-form form {
-  order: 1;
-  flex-grow: 11;
-  margin: 5px;
-  display: flex;
-}
-
-.input-form form input {
-  display: block;
+.input-form input {
   background: rgba(204, 204, 204, 0.4);
   border: none;
   font-size: 20pt;
   color: #ccc;
   padding: 0 5px;
-  flex-grow: 1;
+  flex-grow: 11;
+  margin: 5px;
 }
 
 .input-form button {
